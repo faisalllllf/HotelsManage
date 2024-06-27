@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <div th:fragment="navbar">
 	<nav class="navbar">
 
@@ -212,5 +213,117 @@
 			</div>
 		</div>
 	</nav>
+>>>>>>> 26f4154 (lll)
+=======
+<div th:fragment="navbar">
+	<nav class="navbar">
+
+		<div class="logo_item">
+			<i class="bx bx-menu" id="sidebarOpen"></i> <img
+				src="/images/logo.png" alt=""></i>Optimum Hotel
+		</div>
+
+
+
+
+
+
+		<div class="navbar_content">
+
+
+			<i><a class="nav-link active" aria-current="page"
+				th:href="@{/logout}">Logout</a></i> <i class="bi bi-grid"></i> <i
+				class='bx bx-sun' id="darkLight"></i> <i class='bx bx-bell'></i> <img
+				src="/images/profile.png" alt="" class="profile" />
+		</div>
+
+
+	</nav>
+</div>
+<div th:fragment="sidebar">
+
+
+
+
+
+
+	<!-- sidebar -->
+	<nav class="sidebar">
+		<div class="menu_content">
+			<ul class="menu_items">
+				<div class="menu_title menu_dahsboard"></div>
+				<!-- duplicate or remove this li tag if you want to add or remove navlink with submenu -->
+				<!-- start -->
+
+				<div href="#" class="nav_link submenu_item">
+					<span class="navlink_icon"> <i class="bx bx-home-alt"></i>
+					</span> <span class="navlink">Home</span> <i
+						class="bx bx-chevron-right arrow-left"></i>
+				</div>
+
+
+
+				<!-- end -->
+
+				<!-- duplicate this li tag if you want to add or remove  navlink with submenu -->
+				<!-- start -->
+
+				<div th:if="${role == 'ADMIN'}" class="nav_link submenu_item">
+					<span class="navlink_icon"> <i class="bx bx-grid-alt"></i>
+					</span> <a th:href="@{/admin/createUser}" style="color: black;"
+						class="navlink">Create User</a> <i
+						class="bx bx-chevron-right arrow-left"></i>
+				</div>
+
+
+				<!-- end -->
+
+
+
+
+
+
+				<!-- start -->
+
+				<div href="#" class="nav_link submenu_item">
+					<span class="navlink_icon"> <i class="bx bx-grid-alt"></i>
+					</span> <a th:href="@{'/AddRooms/'+${role}}" class="navlink">Add Rooms</a> <i
+						class="bx bx-chevron-right arrow-left"></i>
+				</div>
+
+
+				<!-- end -->
+
+
+
+
+				<!-- start -->
+
+				<div th:if="${role == 'ADMIN'}" class="nav_link submenu_item">
+					<span class="navlink_icon"> <i class="bx bx-grid-alt"></i>
+					</span> <a th:href="@{/admin/getAllUsers}" class="navlink">Resgistered
+						Users</a> <i class="bx bx-chevron-right arrow-left"></i>
+				</div>
+
+
+				<!-- end -->
+			</ul>
+
+
+			<!-- Sidebar Open / Close -->
+			<div class="bottom_content">
+				<div class="bottom expand_sidebar">
+					<span> Expand</span> <i class='bx bx-log-in'></i>
+				</div>
+				<div class="bottom collapse_sidebar">
+					<span> Collapse</span> <i class='bx bx-log-out'></i>
+				</div>
+			</div>
+		</div>
+	</nav>
+<<<<<<< HEAD
 >>>>>>> 8e11644 (First Commit)
+=======
+>>>>>>> eadf201 (first)
+>>>>>>> 26f4154 (lll)
 </div>
