@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Admin Dashboard</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+<link rel="stylesheet" href="/css/style.css" />
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+	rel="stylesheet" />
+</head>
+<body>
+	<div th:replace="fragments/topandsidenav :: navbar"></div>
+
+	<div style="display: flex">
+		<div style="width: 20%">
+			<div th:replace="fragments/topandsidenav :: sidebar"></div>
+		</div>
+		<div th:if="${role}" style="width: 70%">
+			<h1>Hi<p style="color: blue;" th:text="${userName}">  You Logged In as Admin</h1>
+		</div>
+		
+		
+
+	</div>
+
+	<!-- JavaScript -->
+	<script src="/js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
