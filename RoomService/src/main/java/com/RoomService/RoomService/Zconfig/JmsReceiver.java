@@ -68,4 +68,56 @@ public class JmsReceiver {
 		// Example: Save image to file
 		// saveImageToFile(imageMessage);
 	}
+	
+	@JmsListener(destination = "sendRoomRequestDetails")
+	public void revcievemsgforGetRoom(BytesMessage message) {
+		// Process tehe received ImageMessage object
+		System.out.println("processing message='{}'" + message);
+		// processImage(message);
+
+		try {
+			String checkInDate = message.getStringProperty("checkInDate");
+			String checkoutDate = message.getStringProperty("checkoutDate");
+
+		
+
+			// Process the received image data (e.g., save to file, process, etc.)
+			System.out.println(
+					"Received checkInDate: " + checkoutDate + ", checkOutDate: " + checkoutDate );
+
+			// Example: Save image to file
+			// saveImageToFile(title, description, imageData);
+			System.out.println("saving in db calling servcie layer");
+			processImageFromHotel.processDatesAndReturnRoom(checkInDate, checkoutDate);
+		} catch (JMSException e) {
+			throw new RuntimeException("Failed to process image message", e);
+		}
+	}
+
+
+	@JmsListener(destination = "sendBookRoomRequest")
+	public void revcieveBookRoom(BytesMessage message) {
+		// Process tehe received ImageMessage object
+		System.out.println("processing message='{}'" + message);
+		// processImage(message);
+
+		try {
+			String roomNo = message.getStringProperty("roomNo");
+			
+
+		
+
+			// Process the received image data (e.g., save to file, process, etc.)
+			System.out.println(
+					"Received book room request for roomNo: " + roomNo );
+
+			// Example: Save image to file
+			// saveImageToFile(title, description, imageData);
+			System.out.println("storing room number in db as booked  in db calling servcie layer");
+			//processImageFromHotel.processDatesAndReturnRoom(roomNo);
+		} catch (JMSException e) {
+			throw new RuntimeException("Failed to process image message", e);
+		}
+	}
+	
 }

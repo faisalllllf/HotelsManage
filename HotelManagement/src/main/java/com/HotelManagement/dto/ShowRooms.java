@@ -1,10 +1,10 @@
 
-package com.RoomService.RoomService.entity;
+package com.HotelManagement.dto;
 
 import java.io.Serializable;
 import java.util.Arrays;
 
-public class RoomRequest implements Serializable{
+public class ShowRooms implements Serializable {
 
 	private Long id;
 
@@ -18,7 +18,7 @@ public class RoomRequest implements Serializable{
 
 	private String roomDesc;
 
-	private byte[] picByte;
+	private String picByte;
 
 	public Long getId() {
 		return id;
@@ -68,26 +68,26 @@ public class RoomRequest implements Serializable{
 		this.roomDesc = roomDesc;
 	}
 
-	public byte[] getPicByte() {
+	public String getPicByte() {
 		return picByte;
 	}
 
-	public void setPicByte(byte[] picByte) {
+	public void setPicByte(String picByte) {
 		this.picByte = picByte;
 	}
 
 	@Override
 	public String toString() {
-		return "Room [id=" + id + ", roomNo=" + roomNo + ", roomType=" + roomType + ", GuestNo=" + GuestNo + ", price="
-				+ price + ", roomDesc=" + roomDesc + ", picByte=" + Arrays.toString(picByte) + "]";
+		return "RoomRequest [id=" + id + ", roomNo=" + roomNo + ", roomType=" + roomType + ", GuestNo=" + GuestNo
+				+ ", price=" + price + ", roomDesc=" + roomDesc + ", picByte=" + picByte + "]";
 	}
 
-	public RoomRequest() {
+	public ShowRooms() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public RoomRequest(Long id, int roomNo, String roomType, int guestNo, int price, String roomDesc, byte[] picByte) {
+	public ShowRooms(Long id, int roomNo, String roomType, int guestNo, int price, String roomDesc, String picByte) {
 		super();
 		this.id = id;
 		this.roomNo = roomNo;
