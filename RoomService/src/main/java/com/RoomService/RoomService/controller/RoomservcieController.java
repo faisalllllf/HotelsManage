@@ -14,31 +14,26 @@ import com.RoomService.RoomService.entity.Room;
 import com.RoomService.RoomService.entity.RoomRequest;
 import com.RoomService.RoomService.service.RoomServciefinal;
 
-
 @RestController
 public class RoomservcieController {
 
-
-	
 	@Autowired
 	private RoomServciefinal roomServiceFinal;
-	
-    @GetMapping("/getAllRooms")
-    public  ResponseEntity<List<Room>> getAllRooms()
-    {
+/*
+	@GetMapping("/getAllRooms")
+	public ResponseEntity<String> getAllRooms() {
+		System.out.println("callin db");
+		List<Room> responsefromdb = roomServiceFinal.findAllRooms();
+		System.out.println("responsefromdb succesfull" + responsefromdb);
+		return ResponseEntity.ok("Details get succesfull");
+	}
 
-    	List<Room> responsefromdb = roomServiceFinal.findAllRooms();
-    	System.out.println("responsefromdb"+responsefromdb.toString());
-        return ResponseEntity.ok(responsefromdb);
-    }
-    
-    @PostMapping("/AddRooms")
-    public  ResponseEntity<List<Room>> AddRooms(@RequestBody RoomRequest room)
-    {
-        
-    	List<Room> responsefromdb = roomServiceFinal.findAllRooms();
-    	System.out.println("responsefromdb"+responsefromdb.toString());
-        return ResponseEntity.ok(responsefromdb);
-    }
+	@PostMapping("/AddRooms")
+	public ResponseEntity<List<Room>> AddRooms(@RequestBody RoomRequest room) {
 
+		List<Room> responsefromdb = roomServiceFinal.findAllRooms();
+		System.out.println("responsefromdb" + responsefromdb.toString());
+		return ResponseEntity.ok(responsefromdb);
+	}
+*/
 }

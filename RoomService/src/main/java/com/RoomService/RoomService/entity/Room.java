@@ -33,6 +33,9 @@ public class Room {
 	@Column(name = "room_Description")
 	private String roomDesc;
 
+	@Column(name = "Booking_status")
+	private String bookingStatus;
+
 	@Column(name = "picByte", length = 1000)
 	@Lob
 	private byte[] picByte;
@@ -93,18 +96,28 @@ public class Room {
 		this.picByte = picByte;
 	}
 
-	@Override
-	public String toString() {
-		return "Room [id=" + id + ", roomNo=" + roomNo + ", roomType=" + roomType + ", GuestNo=" + GuestNo + ", price="
-				+ price + ", roomDesc=" + roomDesc + ", picByte=" + Arrays.toString(picByte) + "]";
-	}
-
 	public Room() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Room(Long id, int roomNo, String roomType, int guestNo, int price, String roomDesc, byte[] picByte) {
+	@Override
+	public String toString() {
+		return "Room [id=" + id + ", roomNo=" + roomNo + ", roomType=" + roomType + ", GuestNo=" + GuestNo + ", price="
+				+ price + ", roomDesc=" + roomDesc + ", bookingStatus=" + bookingStatus + ", picByte="
+				+ Arrays.toString(picByte) + "]";
+	}
+
+	public String getBookingStatus() {
+		return bookingStatus;
+	}
+
+	public void setBookingStatus(String bookingStatus) {
+		this.bookingStatus = bookingStatus;
+	}
+
+	public Room(Long id, int roomNo, String roomType, int guestNo, int price, String roomDesc, String bookingStatus,
+			byte[] picByte) {
 		super();
 		this.id = id;
 		this.roomNo = roomNo;
@@ -112,6 +125,7 @@ public class Room {
 		GuestNo = guestNo;
 		this.price = price;
 		this.roomDesc = roomDesc;
+		this.bookingStatus = bookingStatus;
 		this.picByte = picByte;
 	}
 

@@ -12,6 +12,8 @@ public class ProcessImageFromHotel {
 	@Autowired
 	private RoomDetailsRepo roomDetailsRepo;
 
+	@Autowired
+    private	RoomServiceFinalImpl roomServiceFinalImpl;
 	public void process(int roomNo, String roomType,int guestNo,int  price,String  roomDesc,byte[] image)
 
 	{
@@ -24,6 +26,7 @@ public class ProcessImageFromHotel {
 		room.setRoomDesc(roomDesc);
 		room.setRoomNo(roomNo);
 		room.setRoomType(roomType);
+		room.setBookingStatus("Available");
 		try {
 			System.out.println("calling  db");
 			roomDetailsRepo.save(room);
@@ -31,6 +34,13 @@ public class ProcessImageFromHotel {
 		} catch (Exception e) {
 			System.out.println("exception while trying store in db" + e.getMessage());
 		}
+	}
+
+	public void processDatesAndReturnRoom(String checkInDate, String checkoutDate) {
+		// TODO Auto-generated method stub
+		System.out.println("in processDatesAndReturnRoom");
+		roomServiceFinalImpl.findAllRooms();
+		System.out.println("message send succefull to Hotel Mange with room details");
 	}
 
 }

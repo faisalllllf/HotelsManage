@@ -1,4 +1,4 @@
-package com.RoomService.RoomService.Zconfig;
+package com.HotelManagement.service.jms.reciver;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.springframework.context.annotation.Bean;
@@ -11,7 +11,7 @@ import javax.jms.ConnectionFactory;
 
 @Configuration
 @EnableJms
-public class ReceiverConfig {
+public class ReciverCOnfig {
 
 	@Bean
 	public ActiveMQConnectionFactory receiverActiveMQConnectionFactory() {
@@ -28,7 +28,5 @@ public class ReceiverConfig {
 
 		return factory;
 	}
-
-	
 
 }

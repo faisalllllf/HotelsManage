@@ -7,10 +7,11 @@ import com.RoomService.RoomService.entity.Room;
 
 public interface RoomServciefinal {
 
-<<<<<<< HEAD
-//slahlhs
-=======
->>>>>>> 26f4154 (lll)
 
-    List<Room> findAllRooms();
+   void findAllRooms();
+  List<Room> getAllRooms();
+ Room findByRoomNumber(String roomNumber);
+ 
+  void bookRoom(String roomno);
+  
 }
