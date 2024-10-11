@@ -1,0 +1,30 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "datatab&Sequence_1",
+        "variable2&Sequence_1",
+        "variable1&Sequence_1",
+        "invoice&Sequence_1",
+        "inv&Sequence_1",
+        "invoiceLines&Sequence_1",
+        "invoiceNo&Sequence_1",
+        "pdfOutput&Sequence_1",
+        "ExtractedText&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
